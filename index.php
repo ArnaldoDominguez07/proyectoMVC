@@ -19,6 +19,7 @@
             $_GET['id'] = $url[2]; 
         }
     }
+    
     include_once ("vistas/plantilla.php");
     
 ?>
