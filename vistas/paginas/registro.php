@@ -9,11 +9,9 @@
         </div>
         <div class = "card-body">
             <div class="container col-sm-6">
-                <form method="POST" action="index.php?controlador=usuarios&accion=crear">
-                    <div class ="form-group">
-                        <label for="inputPerfil">Perfil</label>
-                        <input type="text" value ="usuario" name="txtperfil" class="form-control" id="inputPerfil" placeholder="Digite el perfil de Usuario" required>
-                    </div>
+                <form method="POST" action="<?php echo constant('URL_BASE'); ?>usuarios/crear">
+                    <!-- Agregamos el perfil por defecto oculto para que no sea manipulado -->
+                    <input type="hidden" value="usuario" name="txtperfil">
                     <div class ="form-group">
                         <label for="inputNombre">Nombre Completo</label>
                         <input type="text" name="txtnombre" class="form-control" id="inputNombre" placeholder="Digite nombre y apellido completo" required>
@@ -30,7 +28,7 @@
                     <button type="submit" class="btn btn-primary">Registrese</button>
                     <br>
                     <div class ="form-group">
-                        <p class = "text-center py-3">Si ya te registraste ingresa aqui | <a href="index.php?controlador=paginas&accion=login"> Ingresar</a></p>
+                        <p class = "text-center py-3">Si ya te registraste ingresa aqui | <a href="<?php echo constant('URL_BASE'); ?>paginas/login"> Ingresar</a></p>
                 </form>
             </div>
         </div>

@@ -24,7 +24,7 @@
                     <button type="submit" name="login" class="btn btn-primary">Ingresar</button>
                     <br>
                     <div class ="form-group">
-                        <p class = "text-center py-3">Para registrarse hágalo aqui | <a href="index.php?controlador=paginas&accion=registro"> Registrese</a></p>
+                        <p class = "text-center py-3">Para registrarse hágalo aqui | <a href="<?php echo constant('URL_BASE'); ?>paginas/registro"> Registrese</a></p>
                 </form>
             </div>
         </div>

@@ -16,7 +16,7 @@
 
 <div class="container">
     <div class="btn-group p-3" role="group" aria-label="">
-        <a href="index.php?controlador=productos&accion=crear" class= "btn btn-primary">Crear Nuevo Producto</a>
+        <a href="<?php echo constant('URL_BASE'); ?>productos/crear" class= "btn btn-primary">Crear Nuevo Producto</a>
     </div>
 
     <h2 class="text-center">PRODUCTOS</h2>
@@ -44,8 +44,8 @@
                     <td>   <?php echo $p->tipoProducto  ?>   </td>
                     <td class="d-flex flex-row justify-content-center">
                         <div class="btn-group" role="group">
-                            <a href="index.php?controlador=productos&accion=actualizarRegistro&id=<?php echo $p->idProducto  ?>" class="btn btn-warning">Editar</a>&nbsp &nbsp
-                            <a href="index.php?controlador=productos&accion=borrarRegistro&id=<?php echo $p->idProducto  ?>" class="btn btn-danger" onclick="return confirmar(<?php echo $p->idProducto  ?>)">Eliminar</a>
+                            <a href="<?php echo constant('URL_BASE'); ?>productos/actualizarRegistro/<?php echo $p->idProducto  ?>" class="btn btn-warning">Editar</a>&nbsp &nbsp
+                            <a href="<?php echo constant('URL_BASE'); ?>productos/borrarRegistro/<?php echo $p->idProducto  ?>" class="btn btn-danger" onclick="return confirmar(<?php echo $p->idProducto  ?>)">Eliminar</a>
 
                         </div>
                     </td>

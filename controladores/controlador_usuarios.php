@@ -11,7 +11,7 @@ include_once "./modelos/usuarios.php";
                 $correo=$_POST["txtEmail"];
                 $clave=$_POST["txtPassword"];
                 Usuario::crear($perfil, $nombre, $correo, $clave);
-                header("Location: index.php?controlador=paginas&accion=login"); 
+                header("Location: " . URL_BASE . "paginas/login"); 
             }
         }
 
@@ -29,7 +29,7 @@ include_once "./modelos/usuarios.php";
                 $numeroRegistros = $consulta->rowCount();
                 if ($numeroRegistros>=1){
                     $_SESSION["usuario"]=$registroEncontrado;
-                    header("Location: index.php");
+                    header("Location: " . URL_BASE);
                 }else{
                     echo "USUARIO O CONTRASEÑA INVALIDOS";
                 }

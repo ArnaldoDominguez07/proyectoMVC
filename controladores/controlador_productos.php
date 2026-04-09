@@ -29,7 +29,7 @@
                 $tipo=$_POST["txttipo"];
                 Producto::ActualizarProducto($idProducto,$pro,$nom,$pres,$prec,$tipo);
                 echo '<script>';
-                echo "window.location.href='index.php?controlador=productos&accion=mostrar' ";
+                echo "window.location.href='" . URL_BASE . "productos/mostrar' ";
                 echo '</script>';
             }
             include_once "./vistas/productos/actualizar.php";
@@ -44,7 +44,7 @@
                 $prec=$_POST["txtprecio"];
                 $tipo=$_POST["txttipo"];
                 Producto::CrearProducto($pro,$nom,$pres,$prec,$tipo);
-                header("Location: index.php?controlador=productos&accion=mostrar");
+                header("Location: " . URL_BASE . "productos/mostrar");
             }
            
             
@@ -55,7 +55,7 @@
                 $idProducto=$_GET['id'];
                 Producto::BorrarProducto($idProducto);
                 echo '<script>';
-                echo "window.location.href='index.php?controlador=productos&accion=mostrar' ";
+                echo "window.location.href='" . URL_BASE . "productos/mostrar' ";
                 echo '</script>';
             }
         }

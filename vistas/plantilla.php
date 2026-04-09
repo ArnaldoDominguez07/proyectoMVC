@@ -12,17 +12,20 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
-    <script src="vistas/recursos/js/datatable.js"></script>
+    <script src="<?php echo constant('URL_BASE'); ?>vistas/recursos/js/datatable.js"></script>
     <!-- fin datatables -->
     <title>Proyecto MVC</title>
 </head>
-<body>
-    <div class="container-fluid">
+<body class="d-flex flex-column min-vh-100">
+    <div class="container-fluid mb-5">
         <?php 
             include_once ("modulos/navbar.php");
             include_once ("./ruteador.php");
         ?>
     </div>
+    
+    <?php include_once ("modulos/footer.php"); ?>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 
                 <div class="card-body">
                     <div class="container col-sm-6">
-                        <form method="POST" action="index.php?controlador=productos&accion=controladorCrearProducto">
+                        <form method="POST" action="<?php echo constant('URL_BASE'); ?>productos/controladorCrearProducto">
                             <div class = "form-group">
                                 <label for="inputcodigo"> <strong> Código de producto </strong></label>
                                 <input type="text" name="txtcodigo" class="form-control" id="inputcodigo" placeholder="Digite el codigo del producto">

@@ -21,10 +21,10 @@ if(!isset($_SESSION["usuario"])){  // no hay sesion
       <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav me-auto mt-2 mt-lg-0">
               <li class="nav-item active">
-                  <a class="nav-link" href="index.php?controlador=paginas&accion=inicio">Inicio <span class="visually-hidden">(current)</span></a>
+                  <a class="nav-link" href="<?php echo constant('URL_BASE'); ?>paginas/inicio">Inicio <span class="visually-hidden">(current)</span></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="index.php?controlador=paginas&accion=nosotros">Nosotros</a>
+                  <a class="nav-link" href="<?php echo constant('URL_BASE'); ?>paginas/nosotros">Nosotros</a>
               </li>
           </ul>
 
@@ -41,8 +41,8 @@ if(!isset($_SESSION["usuario"])){  // no hay sesion
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuarios</a>
                   <div class="dropdown-menu" aria-labelledby="dropdownId">
-                      <a class="dropdown-item" href="index.php?controlador=paginas&accion=login">Ingresar</a>
-                      <a class="dropdown-item" href="index.php?controlador=paginas&accion=registro">Registrese</a>
+                      <a class="dropdown-item" href="<?php echo constant('URL_BASE'); ?>paginas/login">Ingresar</a>
+                      <a class="dropdown-item" href="<?php echo constant('URL_BASE'); ?>paginas/registro">Registrese</a>
                   </div>
                 </li>
           </ul>
@@ -68,21 +68,21 @@ if ($tipoUsuario == "administrador"){   //aqui abre el menu del administrador
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php?controlador=paginas&accion=inicio">Inicio <span class="visually-hidden">(current)</span></a>
+                    <a class="nav-link" href="<?php echo constant('URL_BASE'); ?>paginas/inicio">Inicio <span class="visually-hidden">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="index.php?controlador=productos&accion=mostrar">Lacteos</a>
+                        <a class="dropdown-item" href="<?php echo constant('URL_BASE'); ?>productos/mostrar">Lacteos</a>
                         <a class="dropdown-item" href="#">Bebidas</a>
                         <a class="dropdown-item" href="#">Fritos</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?controlador=paginas&accion=servicios">Servicios</a>
+                    <a class="nav-link" href="<?php echo constant('URL_BASE'); ?>paginas/servicios">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?controlador=paginas&accion=nosotros">Nosotros</a>
+                    <a class="nav-link" href="<?php echo constant('URL_BASE'); ?>paginas/nosotros">Nosotros</a>
                 </li>
                 
             </ul>
@@ -101,8 +101,8 @@ if ($tipoUsuario == "administrador"){   //aqui abre el menu del administrador
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuarios</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
                         
-                        <a class="dropdown-item" href="index.php?controlador=paginas&accion=registro">Registrese</a>
-                        <a class="dropdown-item" href="./vistas/modulos/salir.php">Salir</a>
+                        <a class="dropdown-item" href="<?php echo constant('URL_BASE'); ?>paginas/registro">Registrese</a>
+                        <a class="dropdown-item" href="<?php echo constant('URL_BASE'); ?>vistas/modulos/salir.php">Salir</a>
                     </div>
                 </li>
             </ul>
@@ -128,13 +128,13 @@ if ($tipoUsuario == "usuario"){   //aqui abre el menu del usuario
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php?controlador=paginas&accion=inicio">Inicio <span class="visually-hidden">(current)</span></a>
+                    <a class="nav-link" href="<?php echo constant('URL_BASE'); ?>paginas/inicio">Inicio <span class="visually-hidden">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?controlador=paginas&accion=servicios">Servicios</a>
+                    <a class="nav-link" href="<?php echo constant('URL_BASE'); ?>paginas/servicios">Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?controlador=paginas&accion=nosotros">Nosotros</a>
+                    <a class="nav-link" href="<?php echo constant('URL_BASE'); ?>paginas/nosotros">Nosotros</a>
                 </li>
             </ul>
             <ul  class = "nav navbar-nav navbar-right">
@@ -150,7 +150,7 @@ if ($tipoUsuario == "usuario"){   //aqui abre el menu del usuario
             <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuarios</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="./vistas/modulos/salir.php">Salir</a>
+                        <a class="dropdown-item" href="<?php echo constant('URL_BASE'); ?>vistas/modulos/salir.php">Salir</a>
                     </div>
             </li>
             </ul>
